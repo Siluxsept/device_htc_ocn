@@ -67,8 +67,9 @@ import java.util.Iterator;
 import java.lang.Runtime;
 import java.io.IOException;
 
-import lineageos.providers.LineageSettings;
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.aicp.FileUtils;
+import com.android.internal.os.DeviceKeyHandler;
+import com.android.internal.util.ArrayUtils;
 
 import java.util.List;
 
@@ -125,9 +126,15 @@ public abstract class HTCSuperGestures extends Service {
     }
 
     protected void launchCamera() {
-        final Intent intent = new Intent(lineageos.content.Intent.ACTION_SCREEN_CAMERA_GESTURE);
-        mContext.sendBroadcastAsUser(intent, UserHandle.CURRENT,
-                Manifest.permission.STATUS_BAR_SERVICE);
+        mPowerManager.wakeUp(SystemClock.uptimeMillis(), GESTURE_WAKEUP_REASON);
+        final Intent intent = new Intent(MediaStore.INTENT_ACTION_STILL_IMAGE_CAMERA_SECURE);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK |
+                Intent.FLAG_ACTIVITY_SINGLE_TOP | Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        try {
+            mContext.startActivityAsUser(intent, null, new UserHandle(UserHandle.USER_CURRENT));
+        } catch (ActivityNotFoundException e) {
+            /* Ignore */
+        }
     }
 
     protected void launchBrowser() {

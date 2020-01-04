@@ -14,14 +14,30 @@
 # limitations under the License.
 #
 
-# Inherit from ocn device
-$(call inherit-product, device/htc/ocn/device.mk)
-
+# Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := ocn 
-PRODUCT_NAME := full_ocn
+# Inherit from oce device
+$(call inherit-product, device/htc/ocn/device.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n.mk)
+
+# Inherit some common Aicp stuff.
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+
+## Device identifier. This must come after all inclusions
+PRODUCT_DEVICE := ocn
+PRODUCT_NAME := aicp_ocn
+PRODUCT_BRAND := HTC
+PRODUCT_MODEL := HTC U11
+PRODUCT_MANUFACTURER := HTC
+PRODUCT_RELEASE_NAME := ocn
 
 $(call inherit-product-if-exists, vendor/htc/ocn/ocn-vendor.mk)
+
+# Device Fingerprint
+BUILD_FINGERPRINT := htc/ocnuhl_00710/htc_ocnuhl:8.0.0/OPR6.170623.013/1002308.9:user/release-keys
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="Ron H. (Siluxsept)"

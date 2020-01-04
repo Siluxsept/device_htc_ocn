@@ -47,8 +47,7 @@ import android.util.Log;
 
 import java.util.Iterator;
 
-import lineageos.providers.LineageSettings;
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.aicp.FileUtils;
 
 import java.util.List;
 

@@ -1,0 +1,15 @@
+[
+  {
+    "repository": "Siluxsept/kernel_htc_msm8998",
+    "target_path":"kernel/htc/msm8998"
+  },
+  {
+    "repository": "Siluxsept/proprietary_vendor_htc",
+    "target_path":"vendor/htc"
+  },
+  {
+    "repository": "LineageOS/android_packages_resources_devicesettings",
+    "target_path": "packages/resources/devicesettings",
+    "branch": "lineage-16.0"
+  }
+]
