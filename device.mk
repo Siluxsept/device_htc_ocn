@@ -209,6 +209,7 @@ PRODUCT_PACKAGES += \
     libcurl \
     libgnss \
     libgnsspps \
+    libgps.utils \
     libvehiclenetwork-native
 
 PRODUCT_COPY_FILES += \
