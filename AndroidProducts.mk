@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_ocn.mk
+    $(LOCAL_DIR)/aicp_ocn.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_ocn-user \
-    lineage_ocn-userdebug \
-    lineage_ocn-eng
+    aicp_ocn-user \
+    aicp_ocn-userdebug \
+    aicp_ocn-eng

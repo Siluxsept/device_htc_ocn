@@ -61,8 +61,7 @@ import java.util.Iterator;
 import java.lang.Runtime;
 import java.io.IOException;
 
-import lineageos.providers.LineageSettings;
-import org.lineageos.internal.util.FileUtils;
+import com.android.internal.util.aicp.FileUtils;
 
 import java.util.List;
 

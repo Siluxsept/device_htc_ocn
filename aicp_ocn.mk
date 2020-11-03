@@ -18,14 +18,14 @@
 PRODUCT_RELEASE_NAME := ocn
 
 # Inherit some common Lineage stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/htc/ocn/full_ocn.mk)
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := ocn
-PRODUCT_NAME := lineage_ocn
+PRODUCT_NAME := aicp_ocn
 PRODUCT_BRAND := HTC
 PRODUCT_MODEL := HTC U11
 PRODUCT_MANUFACTURER := HTC
@@ -35,3 +35,7 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
         PRIVATE_BUILD_DESC="ocnuhl_00710-user 8.0.0 OPR6.170623.013/1002308.9 release-keys"
 
 BUILD_FINGERPRINT := htc/ocnuhl_00710/htc_ocnuhl:8.0.0/OPR6.170623.013/1002308.9:user/release-keys
+
+# AICP Device Maintainers
+PRODUCT_BUILD_PROP_OVERRIDES += \
+DEVICE_MAINTAINERS="Ron H. (Siluxsept)"
