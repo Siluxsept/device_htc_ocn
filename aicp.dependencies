@@ -1,26 +1,16 @@
 [
   {
     "repository": "Siluxsept/kernel_htc_msm8998",
-    "target_path": "kernel/htc/msm8998",
-    "remote": "github",
-    "revision": "r11.0"
+    "target_path": "kernel/htc/msm8998"
   },
   {
     "repository": "Siluxsept/proprietary_vendor_htc",
-    "target_path":"vendor/htc",
-    "remote": "github",
-    "revision": "r11.0"
+    "target_path":"vendor/htc"
   },
   {
-    "repository": "AICP/hardware_sony_timekeep",
+    "repository": "LineageOS/android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep",
     "remote": "github",
-    "revision": "q10.0"
-  },
-  {
-    "repository": "AICP/packages_resources_devicesettings",
-    "target_path": "packages/resources/devicesettings",
-    "remote": "github",
-    "revision": "r11.0"
+    "revision": "lineage-18.1"
   }
 ]
