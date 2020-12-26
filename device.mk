@@ -20,6 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 # Get non-open-source specific aspects
 $(call inherit-product-if-exists, vendor/htc/ocn/ocn-vendor.mk)
 
+# Include Gapps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
