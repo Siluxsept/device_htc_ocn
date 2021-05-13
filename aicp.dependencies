@@ -1,22 +1,22 @@
 [
   {
     "repository": "Siluxsept/kernel_htc_msm8998",
-    "target_path": "kernel/htc/msm8998"
+    "target_path": "kernel/htc/msm8998",
+    "revision": "r11.1"
   },
   {
     "repository": "Siluxsept/proprietary_vendor_htc",
-    "target_path":"vendor/htc"
+    "target_path":"vendor/htc",
+    "revision": "r11.1"
   },
   {
     "repository": "LineageOS/android_hardware_sony_timekeep",
     "target_path": "hardware/sony/timekeep",
-    "remote": "github",
     "revision": "lineage-18.1"
   },
   {
     "repository": "AOSP-11/vendor_gapps",
     "target_path": "vendor/gapps",
-    "remote": "github",
     "revision": "11"
   }
 ]
